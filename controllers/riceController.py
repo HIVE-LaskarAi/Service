@@ -5,18 +5,18 @@ import io
 
 # Daftar label untuk kelas hama berdasarkan indeks output model
 class_labels = {
-    0: "rice_leaf_roller",
-    1: "rice_leaf_caterpillar",
+    0: "asiatic_rice_borer",
+    1: "brown_plant_hopper",
     2: "paddy_stem_maggot",
-    3: "asiatic_rice_borer",
-    4: "yellow_rice_borer",
-    5: "rice_gall_midge",
-    6: "brown_plant_hopper",
-    7: "rice_stem_fly",
-    8: "rice_water_weevil",
-    9: "rice_leaf_hopper",
-    10: "rice_shell_pest",
-    11: "thrips"
+    3: "rice_gall_midge",
+    4: "rice_leaf_caterpillar",
+    5: "rice_leaf_hopper",
+    6: "rice_leaf_roller",
+    7: "rice_shell_pest",
+    8: "rice_stem_fly",
+    9: "rice_water_weevil",
+    10: "thrips",
+    11: "yellow_rice_borer"
 }
 
 def preprocess_image(file, target_size=(250, 250)):
