@@ -1,16 +1,12 @@
 from flask import Blueprint, request, jsonify
-from werkzeug.utils import secure_filename
 from tensorflow.keras.models import load_model
 from controllers.riceController import preprocess_image, get_prediction
-import os
 
 # Inisialisasi blueprint
 rice_bp = Blueprint('rice_bp', __name__)
 
 # Load model hanya sekali saat blueprint diimport
-base_dir = os.path.abspath(os.path.dirname(__file__))
-model_path = os.path.normpath(os.path.join(base_dir, '../models/rice_pest_model.h5'))
-model = load_model(model_path)
+model = load_model("models/rice_pest_model.h5")
 
 @rice_bp.route('/predict', methods=['POST'])
 def predict():
