@@ -6,7 +6,7 @@ from controllers.riceController import preprocess_image, get_prediction
 rice_bp = Blueprint('rice_bp', __name__)
 
 # Load model hanya sekali saat blueprint diimport
-model = load_model("models/rice_pest_model.h5")
+model = load_model("models\hive_detection_model.h5")
 
 @rice_bp.route('/predict', methods=['POST'])
 def predict():
