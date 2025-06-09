@@ -1,10 +1,11 @@
 from flask import Blueprint, request, jsonify
 from tensorflow.keras.models import load_model
-from controllers.riceController import predict_rice_pest
+from controllers.rice_controller import predict_rice_pest
 
+# Inisialisasi blueprint
 rice_bp = Blueprint('rice_bp', __name__)
 
-# Load model hanya sekali saat blueprint diimport
+# Load model satu kali saat import route
 model = load_model("models/hive_detection_model.h5")
 
 @rice_bp.route('/predict', methods=['POST'])
